@@ -1,0 +1,33 @@
+{% extends "main.html" %}
+
+{% block content %}
+  
+ {{Message}}
+
+<h1> Project page</h1>
+
+    <table class="table" >
+       <thead class="thead-dark">
+        <tr>
+            <th>Id</th>
+            <th>Project</th>
+            <th>Positive Votes</th>
+            <th>Ratios</th>
+            <th>Created</th>
+            <th></th>
+        </tr>
+      </thead>
+        {% for  i in project  %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.title}}</td>
+            <td>{{i.vote_total}}</td>
+            <td>{{i.vote_ratio}}</td>
+            <td>{{i.created}}</td>
+            <td><a href="{% url 'project' i.id %}">View</a></td>
+        <tr>
+        {% endfor %}
+      
+    </table>
+
+    {% endblock content %}
