@@ -4,11 +4,12 @@
   
 <h1>Project Form</h1>
 
- <form method="POST">
+ <form action="" method="POST">
+    <div class="form-group">
     {% csrf_token %}   
-     {{form.as_p}}
+    <div class="form-group" > {{form.as_p}}</div>
     <input type="submit">
-
+</div>
 </form>
 
   
