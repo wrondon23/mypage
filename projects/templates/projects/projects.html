@@ -35,7 +35,7 @@
                             <img class="project__thumbnail" src="{{project.featured_image.url}}" alt="project thumbnail" />
                             <div class="card__body">
                                 <h3 class="project__title">{{project.title}}</h3>
-                                <h3 class="project__author" href="{% url 'project' project.id %}">By Wilfrido Rondon</h3>
+                                <h3 class="project__author" href="{% url 'project' project.id %}">{{project.owner}}</h3>
                                 </p>
                                 <p class="project--rating">
                                     <span style="font-weight: bold;">{{project.vote_ratio}}%</span> Positive

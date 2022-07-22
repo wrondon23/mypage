@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['localhost','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +43,19 @@ INSTALLED_APPS = [
     'projects.apps.ProjectsConfig',
     'users.apps.UsersConfig',
 ]
+
+
+JAZZMIN_SETTINGS = {
+    # title of the window (Will default to current_admin_site.site_title if absent or None)
+    'site_title': 'Admin Panel',
+
+    # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
+    'site_header': 'Admin Panel',
+    "site_brand": "Admin Panel",
+    "welcome_sign": "Welcome Devsearch",
+    "copyright": "wrondon solutions",
+    "login_logo": "images/svg.svg",
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -131,6 +145,8 @@ STATICFILES_DIRS = [
    BASE_DIR / 'static'
     
 ]
+
+
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
